@@ -31,11 +31,11 @@ allLetter = (inputtxt) => {
     return false;
 };
 getData = i => localStorage.getItem(localStorage.key(i));
-
+//chaining to be implemented
 printData1 = (flag) => {
     var promise1 = new Promise(function(resolve, reject) {
         xhr.onload =function() {
-            if (this.readyState == 4 && this.status == 200) {
+            if (this.readyState === 4 && this.status === 200) {
                 tasks = JSON.parse(xhr.responseText);
                 resolve(tasks);
             }
