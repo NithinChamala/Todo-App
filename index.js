@@ -168,7 +168,7 @@ someDeleteRowFunction = (taskToBeDeleted) => {
     let promise = new Promise(function(resolve,reject) {
         xhr.onload =function() {
             if(this.readyState == XMLHttpRequest.DONE && this.status ==200) {
-                resolve("fine");
+                resolve("done");
             }
         }
         url= "http://localhost:3000/tasks/";
