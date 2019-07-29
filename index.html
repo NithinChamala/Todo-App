@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onload ="printData1('todo')">
+
+
+<div class ="input_division">
+    <form id="myForm">
+    <label>Task Name :~</label>
+    <input type="text" name="fname"  placeholder="Enter Valid English words and no special characters ...">
+    <button type="button" class ="input_btn" onclick="insertData()">Submit</button>
+    </form>
+</div>
+
+<br><br>
+<h1 id ="title"></h1>
+<h5 id ="description"></h5>
+<div class="flx">
+    <div class="navbar" id ="myDIV">
+        <button onclick ="printData1('todo')" class ="btn active">TODO</button>
+        <button onclick ="printData1('inprogress')"class="btn">IN PROGRESS</button>
+        <button onclick="printData1('done')" class="btn">Done</button>
+    </div>
+    <p id ="printing"></p>
+</div>
+
+
+
+<link rel="stylesheet" href="index.css">
+<script src ="index1.js"></script>
+</body>
+</html>

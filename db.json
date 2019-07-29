@@ -1,0 +1,78 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-object",
+      "author": "nithin"
+    },
+    {
+      "id": 3
+    },
+    {
+      "task": "love her",
+      "timestamp": "1564119575101",
+      "status": "todo",
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tasks": [
+    {
+      "task": "do your job",
+      "timestamp": "1564120360241",
+      "status": "inprogress",
+      "id": 33
+    },
+    {
+      "task": "asdfsd",
+      "timestamp": "1564247666623",
+      "status": "done",
+      "id": 34
+    },
+    {
+      "task": "asdasfd",
+      "timestamp": "1564248725944",
+      "status": "inprogress",
+      "id": 39
+    },
+    {
+      "task": "king",
+      "timestamp": "1564248865103",
+      "status": "inprogress",
+      "id": 41
+    },
+    {
+      "[object Object]": "",
+      "id": 42
+    },
+    {
+      "task": "SDS",
+      "timestamp": "1564251430793",
+      "status": "inprogress",
+      "id": 43
+    },
+    {
+      "task": "qwe",
+      "timestamp": "1564248465198",
+      "status": "todo",
+      "id": 44
+    }
+  ]
+}
