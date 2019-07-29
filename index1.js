@@ -12,7 +12,7 @@ insertData = () => {
         return;
     }
     xhr.onload =function() {
-        if(this.readyState == XMLHttpRequest.DONE && this.status ==200) {
+        if(this.readyState === XMLHttpRequest.DONE && this.status ===200) {
         }
     }
     status ="todo";
@@ -98,59 +98,32 @@ update_task =(obj,flag) => {
     var promise = new Promise(function(resolve,reject){
         xhr.onload = function () {
             if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                const task = JSON.parse(xhr.responseText);
+                // const task = JSON.parse(xhr.responseText);
+                console.log("carem board");
                 if (flag == 1) {
-                    task.status = "todo";
+                    printData1("todo");
                 } else if (flag == 2) {
-                    task.status = "inprogress";
+                    printData1("inprogress");
 
                 } else {
-                    task.status = "done";
+                    printData1("done");
                 }
-                resolve(task);
             }
         }
-
-        url = "http://localhost:3000/tasks/" + key;
-        xhr.open("get", url, false);
-        xhr.send();
-
-
-    })
-    //delete task
-    promise.then(function(data) {
-        xhr.onload =function() {
-            if(this.readyState == XMLHttpRequest.DONE && this.status ==200) {
-                return data;
-            }
+        let stat ='';
+        if (flag == 1) {
+            stat = "todo";
+        } else if (flag == 2) {
+            stat = "inprogress";
+        } else {
+            stat = "done";
         }
-        let url= "http://localhost:3000/tasks/";
-        xhr.open("delete", url+data.id ,false);
-        xhr.send(null);
-
-    })
-    // updata data
-    promise.then(function(data){
-        console.log(data);
-        xhr.onload =function() {
-            if(this.readyState == XMLHttpRequest.DONE && this.status ==200) {
-                console.log("update done successfully");
-                resolve(flag);
-            }
-        }
-
-        xhr.open("post", "http://localhost:3000/tasks",false);
+        console.log(stat);
+        let url = "http://localhost:3000/tasks/" + key;
+        xhr.open("PATCH", url, false);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send("task=" +data.task+ "&timestamp=" + data.timestamp + "&status=" + data.status);
-
+        xhr.send(`status=${stat}`);
     })
-    promise.finally(function(task,flag){
-        console.log(flag);
-        console.log(task);
-        printData1('todo');
-    })
-
-
 };
 const header = document.getElementById('myDIV');
 const btns = header.getElementsByClassName('btn');
@@ -171,27 +144,14 @@ someDeleteRowFunction = (taskToBeDeleted) => {
     let promise = new Promise(function(resolve,reject) {
         xhr.onload =function() {
             if(this.readyState == XMLHttpRequest.DONE && this.status ==200) {
-                resolve(node);
+                // resolve(node);
+                printData1("todo");
+                // document.location.reload();
             }
         }
         url= "http://localhost:3000/tasks/";
         xhr.open("delete", url+node ,false);
         xhr.send(null);
-
-    })
-     promise.then(function(node) {
-        xhr.onload =function() {
-            if (this.readyState == 4 && this.status == 200) {
-                tasks = JSON.parse(xhr.responseText);
-                resolve(tasks.status);
-            }
-        }
-        xhr.open("get", "http://localhost:3000/tasks/"+node,false);
-        xhr.send();
-    })
-        .then((value) => {
-            console.log(value+"status");
-            printData1(value);
 
     })
 };

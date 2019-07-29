@@ -1,7 +1,18 @@
+
+
 {
   "name": "todoxml",
-  "version": "1.0.0",
-  "dependencies": {
-    
-  }
+"version": "1.0.0",
+"description": "",
+"main": "index1.js",
+
+"devDependencies": {
+"eslint": "^6.1.0"
+},
+"scripts": {
+"lint": "eslint",
+"test": "echo \"Error: no test specified\" && exit 1"
+},
+"author": "",
+"license": "ISC"
 }
