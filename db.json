@@ -35,50 +35,10 @@
   },
   "tasks": [
     {
-      "task": "do your job",
-      "timestamp": "1564120360241",
-      "status": "inprogress",
-      "id": 33
-    },
-    {
-      "[object Object]": "",
-      "id": 42
-    },
-    {
-      "task": "have breakfast",
-      "timestamp": "1564389615612",
-      "status": "todo",
-      "id": 43
-    },
-    {
-      "task": "workout everyday",
-      "timestamp": "1564389626630",
-      "status": "inprogress",
-      "id": 44
-    },
-    {
-      "task": "call suman",
-      "timestamp": "1564389640550",
-      "status": "todo",
-      "id": 45
-    },
-    {
-      "task": "message umesh",
-      "timestamp": "1564389649021",
-      "status": "todo",
-      "id": 46
-    },
-    {
-      "task": "whatsapp manoj",
-      "timestamp": "1564389697376",
-      "status": "todo",
-      "id": 47
-    },
-    {
-      "task": "brush today",
-      "timestamp": "1564390703917",
-      "status": "done",
-      "id": 48
+      "task": "as",
+      "timestamp": 1564458514195,
+      "status": "",
+      "id": 65
     }
   ]
 }

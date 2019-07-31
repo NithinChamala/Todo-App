@@ -4,7 +4,7 @@
   "name": "todoxml",
 "version": "1.0.0",
 "description": "",
-"main": "index1.js",
+"main": "javascript/index1.js",
 
 "devDependencies": {
 "eslint": "^6.1.0"

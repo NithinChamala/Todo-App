@@ -7,7 +7,10 @@
 </head>
 <body onload ="printData1('todo')">
 
+<button type="button" class="all" onclick="deleteAllData1('todo')"> Delete all todo data</button>
 
+<button type="button" class="all" onclick="deleteAllData1('inprogress')"> Delete all inprogress data</button>
+<button type="button" class="all" onclick="deleteAllData1('done')"> Delete all done data</button>
 <div class ="input_division">
     <form id="myForm">
     <label>Task Name :~</label>
@@ -27,7 +30,7 @@
     </div>
     <p id ="printing"></p>
 </div>
-<link rel="stylesheet" href="index.css">
-<script src ="index1.js"></script>
+<link rel="stylesheet" href="css/index.css">
+<script src ="javascript/index1.js"></script>
 </body>
 </html>
