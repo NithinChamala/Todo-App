@@ -7,15 +7,16 @@
 </head>
 <body onload ="printData1('todo')">
 
-<button type="button" class="all" onclick="deleteAllData1('todo')"> Delete all todo data</button>
-
-<button type="button" class="all" onclick="deleteAllData1('inprogress')"> Delete all inprogress data</button>
-<button type="button" class="all" onclick="deleteAllData1('done')"> Delete all done data</button>
 <div class ="input_division">
     <form id="myForm">
     <label>Task Name :~</label>
     <input type="text" name="fname"  placeholder="Enter Valid English words and no special characters ...">
     <button type="button" class ="input_btn" onclick="insertData()">Submit</button>
+
+        <button type="button" class="all" onclick="deleteAllData1('todo')"> Delete all todo data</button>
+
+        <button type="button" class="all" onclick="deleteAllData1('inprogress')"> Delete all inprogress data</button>
+        <button type="button" class="all" onclick="deleteAllData1('done')"> Delete all done data</button>
     </form>
 </div>
 

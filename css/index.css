@@ -40,7 +40,10 @@ body {
     width :100%;
 }
 .all {
-    color:black;
+    color:white;
+    padding : 8px;
+    width :33%;
+    border-radius: 4px;
     background-color: #4CAF50;
 }
 .flex-container {
