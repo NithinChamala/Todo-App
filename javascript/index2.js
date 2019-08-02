@@ -233,6 +233,7 @@ printData1 = (flag) => {
         }
         for (let i = 0; i < tasks.length; i++) {
             if (tasks[i].status === flag) {
+
                 data += `<div class ="altcolor" ><span class="a">${tasks[i].id}</span><div class="textBox"><span class="c">`;
                 data += `${tasks[i].task}</span></div><span class="d">`;
                 data += '<input style="color:black ;" type ="button" value="X" onclick ="someDeleteRowFunction(this)"></span><br>';

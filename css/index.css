@@ -46,6 +46,9 @@ body {
     border-radius: 4px;
     background-color: #4CAF50;
 }
+/*.all :hover {*/
+/*    color : deeppink;*/
+/*}*/
 .flex-container {
     display: flex;
     height: auto;
@@ -73,7 +76,7 @@ body {
 .navbar .btn:hover {
 
     background-color: #ddd;
-    color: black;
+    color: green;
 
 }
 
