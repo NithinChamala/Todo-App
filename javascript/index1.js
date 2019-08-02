@@ -36,6 +36,7 @@ const xhr = new XMLHttpRequest();
 //
 // }
 
+// Getting all the tasks based on flag ( todo, inprogress or done)
 function getAllData1(flag) {
     return new Promise(((resolve, reject) => {
         xhr.onload = function () {
@@ -48,6 +49,8 @@ function getAllData1(flag) {
         xhr.send();
     }));
 }
+
+//Deleting all tasks based on flag(todo, inprogress or done)
 deleteAllData1 = (flag) => {
     const promise = getAllData1(flag);
     promise.then((tasks) => {
@@ -87,6 +90,8 @@ deleteAllData1 = (flag) => {
         //
         //    }
 
+        
+        // promises looping to delete all data
         for (let i = 0, p = Promise.resolve(); i < arr[1] + 1; i++) {
             if (i === arr[1]) {
                 setTimeout(() => { printData1(arr[2]); });
@@ -143,6 +148,8 @@ deleteAllData1 = (flag) => {
 };
 
 
+
+//To insert task by default all tasks have status type "todo" using fetch
 insertData = () => {
     const date = new Date();
 
@@ -182,6 +189,8 @@ insertData = () => {
 //
 // };
 
+//validating for only valid task names
+
 allLetter = (inputtxt) => {
     const letters = /^[A-Za-z ]+$/;
     if (inputtxt.match(letters)) {
@@ -191,6 +200,10 @@ allLetter = (inputtxt) => {
 };
 // getData = i => localStorage.getItem(localStorage.key(i));
 // chaining to be implemented
+
+
+// to print the data
+
 printData1 = (flag) => {
     fetch('http://localhost:3000/tasks').then(data => (data.json())).then((tasks) => {
         let data = "<div class ='flex-container' >";
@@ -289,6 +302,9 @@ printData1 = (flag) => {
 
 // });
 // }
+
+
+//Updating the task
 update_task = (obj, flag) => {
     const parent_node = obj.parentNode;
     const class_array = parent_node.getElementsByClassName('a');
@@ -364,6 +380,9 @@ for (let i = 0; i < btns.length; i++) {
         this.className += ' active';
     });
 }
+
+
+// To delete the task
 someDeleteRowFunction = (taskToBeDeleted) => {
     const row = taskToBeDeleted.parentNode.parentNode;
     const node = row.childNodes[0].childNodes[0].nodeValue;
