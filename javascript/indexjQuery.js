@@ -25,7 +25,7 @@ $(document).ready(function(){
         });
     })
 });
-
+//  creating the element to print the data on loading using DOM functions
 window.create_Text_Element = (id,task) => {
     let div = $("<div>");
     div.addClass("altcolor");
@@ -49,6 +49,8 @@ window.create_Text_Element = (id,task) => {
     div.append(spand);
     return div;
 };
+
+//  creating the checkbox for the task to update status using DOM functions
 window.create_checkbox1 = (flag,div) => {
     let input = $("<input>");
     input.addClass("checked");
@@ -133,7 +135,7 @@ window.printData1 = (flag) => {
         }
 
         $("#printing").html(data);
-
+        //updating task status
         $(".update_task1").click(function() {
             const parent_node = this.parentNode;
             const class_array = parent_node.getElementsByClassName('a');
@@ -193,7 +195,7 @@ window.printData1 = (flag) => {
                 console.log('Insert Failed with status code');
             });
         });
-
+        // To delete the task
         const btns = document.getElementsByClassName('closebtn');
         for (let i = 0; i < btns.length; i++) {
             btns[i].addEventListener('click', function () {
