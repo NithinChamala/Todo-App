@@ -36,7 +36,6 @@ const xhr = new XMLHttpRequest();
 //
 // }
 
-
 // Getting all the tasks based on flag ( todo, inprogress or done)
 function getAllData1(flag) {
     return new Promise(((resolve, reject) => {
@@ -50,7 +49,6 @@ function getAllData1(flag) {
         xhr.send();
     }));
 }
-
 
 //Deleting all tasks based on flag(todo, inprogress or done)
 deleteAllData1 = (flag) => {
@@ -91,7 +89,6 @@ deleteAllData1 = (flag) => {
         //
         //
         //    }
-
 
         // promises looping to delete all data
         for (let i = 0, p = Promise.resolve(); i < arr[1] + 1; i++) {
@@ -191,8 +188,6 @@ insertData = () => {
 // };
 
 
-//validating for only valid names
-
 allLetter = (inputtxt) => {
     const letters = /^[A-Za-z ]+$/;
     if (inputtxt.match(letters)) {
@@ -203,7 +198,6 @@ allLetter = (inputtxt) => {
 // getData = i => localStorage.getItem(localStorage.key(i));
 // chaining to be implemented
 
-// to print the data
 printData1 = (flag) => {
     fetch('http://localhost:3000/tasks').then(data => (data.json())).then((tasks) => {
         let data = "<div class ='flex-container' >";
