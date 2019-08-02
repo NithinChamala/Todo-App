@@ -2,7 +2,7 @@ const xhr = new XMLHttpRequest();
 
 $(document).ready(function(){
 
-// Insert task into db.json using fetch
+// Insert task into db.json using fetch commands
     $("#insertId").click(function() {
 
         const date = new Date();
